@@ -6,7 +6,7 @@ shell: bash
 env:
   variables:
     DEPLOYMENT_DIRECTORY: "${OCI_WORKSPACE_DIR}/deployment/${DEPLOYMENT_ENV}"
-    DOCKER_TAG: "sin.ocir.io/sehubjapaciaas/demorepo:latest"
+    DOCKER_TAG: "sin.ocir.io/axwnls9yzz6h/demorepo:latest"
   
   exportedVariables:
     - BUILDRUN_HASH    
@@ -22,7 +22,7 @@ steps:
           export BUILDRUN_HASH=`echo ${OCI_BUILD_RUN_ID} | rev | cut -c 1-7`
           echo "BUILDRUN_HASH: " $BUILDRUN_HASH
 
-          export REGISTRY="sin.ocir.io/sehubjapaciaas/demorepo"
+          export REGISTRY="sin.ocir.io/axwnls9yzz6h/demorepo"
           export PROJECT_NAME="fn-backend"
           export DEPLOYMENT_ENV="stage"
           export IMAGE_CREATED_BY="OCIDevOps"
